@@ -1,0 +1,18 @@
+{
+  "name": "aeg-redis-util",
+  "version": "1.0.0",
+  "description": "Tools to help manage Redis",
+  "main": "delete.js",
+  "dependencies": {
+    "async": "^2.0.0-rc.4",
+    "lodash": "^4.12.0",
+    "redis": "^2.6.0-2",
+    "yargs": "^4.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "delete": "node ./delete"
+  },
+  "author": "",
+  "license": "ISC"
+}
