@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-const Redis = require('@adexchange/aeg-redis');
+const Redis = require('@adexchange/aeg-redis').default;
 //noinspection JSUnresolvedFunction
 const argv = require('yargs')
 	.usage('Usage: $0 pattern')
@@ -9,7 +9,7 @@ const argv = require('yargs')
 	.argv;
 
 const pattern = argv._[0];
-const client = new Redis({host: '127.0.0.1', port: 6391});
+const client = new Redis({host: '192.168.99.100', port: 32769});
 
 client.on('info', (event) => {
 	console.log(event);

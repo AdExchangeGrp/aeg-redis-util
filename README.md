@@ -1,4 +1,4 @@
 # redis-utils
 
 #commands
-npm run delete -- -- test*
+npm run delete -- test*
