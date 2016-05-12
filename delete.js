@@ -11,6 +11,10 @@ const argv = require('yargs')
 const pattern = argv._[0];
 const client = new Redis({host: '127.0.0.1', port: 6391});
 
+client.on('info', (event) => {
+	console.log(event);
+});
+
 client.scanDel(pattern, (err) => {
 	if (err) {
 		console.log(err);
