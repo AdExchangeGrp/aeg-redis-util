@@ -4,14 +4,15 @@
   "description": "Tools to help manage Redis",
   "main": "delete.js",
   "dependencies": {
-    "@adexchange/aeg-redis": "0.0.12",
+    "@adexchange/aeg-redis": "0.0.15",
     "async": "^2.0.0-rc.4",
     "lodash": "^4.12.0",
     "yargs": "^4.7.0"
   },
   "devDependencies": {},
   "scripts": {
-    "delete": "node ./delete"
+    "delete": "node ./delete",
+    "force-expire": "node ./force-expire"
   },
   "author": "",
   "license": "ISC"
