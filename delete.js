@@ -9,7 +9,7 @@ const argv = require('yargs')
 	.argv;
 
 const pattern = argv._[0];
-const client = new Redis({host: '192.168.99.100', port: 32769});
+const client = new Redis({host: 'localhost', port: 6381});
 
 client.on('info', (event) => {
 	console.log(event);
