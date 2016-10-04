@@ -9,16 +9,21 @@ const argv = require('yargs')
 	.argv;
 
 const pattern = argv._[0];
-const client = new Redis({host: 'localhost', port: 6381});
+const client = new Redis({host: 'localhost', port: 6379});
 
 client.on('info', (event) => {
 	console.log(event);
 });
 
-client.scanDel(pattern, (err) => {
-	if (err) {
+client.scanDel(pattern)
+	.then(() => {
+
+		console.log('done');
+		process.exit(0);
+
+	})
+	.catch((err) => {
+
 		console.log(err);
-	}
-	console.log('done');
-	process.exit(0);
-});
+
+	});
